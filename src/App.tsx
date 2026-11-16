@@ -201,8 +201,12 @@ function App() {
                 <div className="contact-method-icon"><Mail size={22} /></div>
                 <div className="contact-method-content">
                   <span className="contact-method-label">EMAIL ME</span>
-                  <a className="contact-method-value" href="https://mail.google.com/mail/?view=cm&fs=1&to=ridhigarg7989%40gmail.com"
-                  <span className="contact-method-hint">Opens your email app</span>
+                 
+<a className="contact-method-value" href="https://mail.google.com/mail/?view=cm&fs=1&to=ridhigarg7989%40gmail.com" target="_blank" rel="noopener noreferrer">
+  ridhigarg7989@gmail.com
+</a>
+<span className="contact-method-hint">Opens Gmail in a new tab</span>
+
                 </div>
                 <button type="button" className="contact-copy" onClick={copyEmail} aria-label="Copy email address">
                   {emailCopied ? <Check size={17} /> : <Copy size={17} />}

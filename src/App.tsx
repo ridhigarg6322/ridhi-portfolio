@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowUpRight, Linkedin, Mail, Menu, X } from 'lucide-react'
+import { ArrowDown, ArrowUpRight, Check, Copy, Linkedin, Mail, Menu, X } from 'lucide-react'
 import { useState } from 'react'
 
 const experiences = [
@@ -58,6 +58,15 @@ const skills = [
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [emailCopied, setEmailCopied] = useState(false)
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText('ridhigarg7989@gmail.com')
+      setEmailCopied(true)
+    } catch {
+      window.location.href = 'mailto:ridhigarg7989@gmail.com'
+    }
+  }
 
   const closeMenu = () => setMenuOpen(false)
 
@@ -80,7 +89,7 @@ function App() {
         <section className="hero section-wrap" id="home">
           <div className="hero-copy">
             <div className="eyebrow"><span className="status-dot" /> COMPUTER SCIENCE STUDENT · UB HONORS COLLEGE</div>
-            <h1>Hi, I'm Ridhi<span className="blue-period">.</span><br /><span className="headline-muted">I build things</span><br />for the web.</h1>
+            <h1>Hi, I'm Ridhi<span className="blue-period">.</span><br /><span className="headline-muted hero-subheadline">A computer science student and aspiring software engineer.</span></h1>
             <p className="hero-description">
               I'm a Computer Science student at the University at Buffalo's Honors College. At SelectFi, I work on frontend and backend features in a production TypeScript codebase. I'm focused on software engineering and interested in cybersecurity.
             </p>
@@ -179,16 +188,39 @@ function App() {
 
         <section className="contact-section" id="contact">
           <div className="section-wrap contact-inner">
-            <div className="section-label"><span>05</span> CONTACT</div>
-            <h2>Have something<br />in mind<span>?</span></h2>
-            <p>I'm always happy to connect, learn about opportunities, or talk about technology.</p>
-            <a className="button button-light" href="mailto:ridhigarg7989@gmail.com">Say hello <ArrowUpRight size={16} /></a>
+            <div className="section-label"><span>05</span> LET'S CONNECT</div>
+            <div className="contact-heading-row">
+              <div>
+                <h2>Let's get in <span>touch.</span></h2>
+                <p>Interested in connecting or discussing an opportunity? I'd love to hear from you.</p>
+              </div>
+              <div className="contact-decoration" aria-hidden="true">✳</div>
+            </div>
+            <div className="contact-methods">
+              <div className="contact-method">
+                <div className="contact-method-icon"><Mail size={22} /></div>
+                <div className="contact-method-content">
+                  <span className="contact-method-label">EMAIL ME</span>
+                  <a className="contact-method-value" href="mailto:ridhigarg7989@gmail.com">ridhigarg7989@gmail.com</a>
+                  <span className="contact-method-hint">Opens your email app</span>
+                </div>
+                <button type="button" className="contact-copy" onClick={copyEmail} aria-label="Copy email address">
+                  {emailCopied ? <Check size={17} /> : <Copy size={17} />}
+                  {emailCopied ? 'Copied!' : 'Copy'}
+                </button>
+              </div>
+              <a className="contact-method contact-method-link" href="https://www.linkedin.com/in/ridhi-garg-369371332/" target="_blank" rel="noopener noreferrer">
+                <div className="contact-method-icon"><Linkedin size={22} /></div>
+                <div className="contact-method-content">
+                  <span className="contact-method-label">LINKEDIN</span>
+                  <span className="contact-method-value">Connect with me on LinkedIn</span>
+                  <span className="contact-method-hint">linkedin.com/in/ridhi-garg-369371332</span>
+                </div>
+                <ArrowUpRight size={22} className="contact-out-arrow" />
+              </a>
+            </div>
             <div className="contact-bottom">
               <span>Ridhi Garg · Buffalo, NY</span>
-              <div className="social-links">
-                <a href="https://www.linkedin.com/in/ridhi-garg-369371332/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={18} /></a>
-                <a href="mailto:ridhigarg7989@gmail.com" aria-label="Email"><Mail size={18} /></a>
-              </div>
               <span>© 2026 Ridhi Garg</span>
             </div>
           </div>

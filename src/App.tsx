@@ -81,7 +81,10 @@ function App() {
           {['About', 'Experience', 'Projects', 'Skills', 'Contact'].map((item) => (
             <a key={item} href={`#${item.toLowerCase()}`} onClick={closeMenu}>{item}</a>
           ))}
-          <a className="nav-resume" href="/Ridhi-Garg-Resume.pdf" target="_blank" rel="noreferrer">Resume <ArrowUpRight size={14} /></a>
+          
+<a className="nav-resume" href="/Final_Resume_2026.pdf" target="_blank" rel="noopener noreferrer">
+  Resume <ArrowUpRight size={14} />
+</a>
         </nav>
       </header>
 

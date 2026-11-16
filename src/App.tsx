@@ -64,7 +64,7 @@ function App() {
       await navigator.clipboard.writeText('ridhigarg7989@gmail.com')
       setEmailCopied(true)
     } catch {
-      window.location.href = 'mailto:ridhigarg7989@gmail.com'
+      window.open('https://mail.google.com/mail/?view=cm&fs=1&to=ridhigarg7989%40gmail.com', '_blank')
     }
   }
 
@@ -201,7 +201,7 @@ function App() {
                 <div className="contact-method-icon"><Mail size={22} /></div>
                 <div className="contact-method-content">
                   <span className="contact-method-label">EMAIL ME</span>
-                  <a className="contact-method-value" href="mailto:ridhigarg7989@gmail.com">ridhigarg7989@gmail.com</a>
+                  <a className="contact-method-value" href="https://mail.google.com/mail/?view=cm&fs=1&to=ridhigarg7989%40gmail.com"
                   <span className="contact-method-hint">Opens your email app</span>
                 </div>
                 <button type="button" className="contact-copy" onClick={copyEmail} aria-label="Copy email address">

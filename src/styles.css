@@ -94,3 +94,32 @@ h2{font-size:clamp(38px,4.7vw,60px);letter-spacing:-3.6px}.about-grid h2 span,.s
 @media(max-width:800px){.hero{gap:28px}.hero h1{letter-spacing:-4px}.orbit-card{height:340px}.orbit-card:before{left:-30px}.orbit-card:after{left:20px}.orbit-mark{font-size:95px}.project-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:620px){.site-shell{background:radial-gradient(ellipse 90% 400px at 80% 4%,#e6edff,transparent),var(--paper)}.nav-links{background:#fff}.hero{padding-top:65px;padding-bottom:70px}.hero h1{font-size:clamp(53px,13vw,72px);letter-spacing:-3.5px}.hero-description{font-size:15px}.hero-aside{margin-top:50px;min-height:355px}.orbit-card{height:320px;width:90%;transform:rotate(2deg)}.orbit-mark{font-size:90px}.floating-note{right:0;bottom:-5px}.content-section{padding-top:85px}.about-facts{gap:8px}.about-facts>div{padding:12px 8px}.about-facts small{font-size:9px}.experience-item{padding:23px 17px;grid-template-columns:24px 1fr}.experience-title-row h3{font-size:18px}.project-grid{grid-template-columns:1fr}.skill-group{grid-template-columns:1fr;padding:20px}.contact-section{border-radius:30px 30px 0 0;margin-top:85px}.contact-inner h2{letter-spacing:-3px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+
+/* Refined editorial details: airy, soft, and professional */
+:root{--blue:#4267d5;--ink:#20243b;--paper:#fcfcff}
+.hero-subheadline{display:inline-block;font-size:clamp(29px,3.7vw,54px);line-height:1.2;letter-spacing:-1.9px;max-width:760px;margin-top:16px;color:#6e7b9b}
+.hero h1{letter-spacing:-4.5px}
+.site-shell{background:radial-gradient(ellipse 65% 460px at 88% 3%,#e7ebff 0%,transparent 72%),radial-gradient(ellipse 50% 400px at 2% 30%,#f3efff 0%,transparent 70%),var(--paper)}
+.orbit-card{box-shadow:0 28px 75px rgba(69,82,137,.16)}
+.project-card,.experience-item,.skill-group{transition:transform .22s ease,box-shadow .22s ease}
+.project-card:hover,.experience-item:hover{transform:translateY(-4px);box-shadow:0 18px 42px rgba(41,54,108,.09)}
+.contact-section{background:radial-gradient(circle at 90% 10%,#344b81 0%,transparent 45%),#18213c}
+.contact-heading-row{display:flex;align-items:center;justify-content:space-between;gap:30px}
+.contact-heading-row h2{font-size:clamp(52px,7.5vw,88px);margin:10px 0 16px}
+.contact-heading-row p{color:#b9c4df;font-size:16px;line-height:1.7;max-width:480px}
+.contact-decoration{font-size:140px;line-height:1;color:#8ca5f0;opacity:.55;transform:rotate(-12deg)}
+.contact-methods{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:55px}
+.contact-method{min-width:0;display:flex;align-items:center;gap:18px;padding:26px;border:1px solid rgba(204,216,255,.22);border-radius:23px;background:rgba(255,255,255,.075);color:white;text-decoration:none;transition:background .2s ease,transform .2s ease}
+.contact-method:hover{background:rgba(255,255,255,.13);transform:translateY(-3px)}
+.contact-method-icon{display:flex;align-items:center;justify-content:center;flex-shrink:0;width:52px;height:52px;border-radius:17px;background:#dce5ff;color:#304caa}
+.contact-method-content{display:flex;flex-direction:column;gap:7px;min-width:0;flex:1}
+.contact-method-label{font-size:10px;letter-spacing:2px;font-weight:800;color:#aebfe9}
+.contact-method-value{color:white;font-weight:700;font-size:clamp(13px,1.4vw,18px);overflow-wrap:anywhere;text-decoration:none}
+a.contact-method-value:hover{text-decoration:underline}
+.contact-method-hint{color:#b2bdd6;font-size:11px;overflow-wrap:anywhere}
+.contact-copy{display:flex;align-items:center;gap:6px;border:1px solid #7486b3;background:transparent;color:#fff;padding:10px 12px;border-radius:30px;cursor:pointer;font:inherit;font-size:12px;flex-shrink:0}
+.contact-copy:hover{background:#fff;color:#18213c}
+.contact-out-arrow{flex-shrink:0;color:#b2c6ff}
+.contact-bottom{margin-top:80px}
+@media(max-width:800px){.contact-methods{grid-template-columns:1fr}.contact-decoration{font-size:90px}}
+@media(max-width:620px){.hero h1{letter-spacing:-2.5px}.hero-subheadline{font-size:clamp(28px,7.4vw,40px);letter-spacing:-1.2px}.contact-heading-row{display:block}.contact-decoration{display:none}.contact-method{padding:19px;gap:12px}.contact-method-icon{width:43px;height:43px;border-radius:13px}.contact-copy{padding:8px}.contact-heading-row p{font-size:14px}.contact-methods{margin-top:30px}}
